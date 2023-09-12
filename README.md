@@ -9,8 +9,13 @@ Getting Started
 1. Clone or get this repository
 2. Set PROGRESS_BAR_PATH variable with absolute path of *bash-progress-bar.sh*
 3. in your project import this  *progress-bar.sh*
+4. call starProgressBar with message arg
+5. Run your task redirecting output to /dev/null ¹
+	1.	sample echo "something" &> /dev/null
+6. call *stopAsSuccessProgressBar* or *stopProgressBarAsFail*
 
-
+Sample
+---
 
 ```bash
 PROGRESS_BAR_PATH=somepath
