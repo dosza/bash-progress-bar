@@ -50,7 +50,7 @@ How this tool works
 When startProgressBar is called, the bash-progress-bar.sh script is initialized in the background.
 Next instruction is executed while the animation is running
 
-The user must use the function *stopAsSuccessProgressBar* (for success) or stopProgressBarAsFail* (failure)
+The user must use the function *stopAsSuccessProgressBar* (for success) or *stopProgressBarAsFail* (failure)
 
 Note
 ---
