@@ -24,7 +24,7 @@ source . ./progress-bar.sh
 task(){
 	for i in $(seq 0..100);
 	do
-		echo $i
+		echo $i &> /dev/null
 	done
 }
 startProgressBar "message"
@@ -43,14 +43,19 @@ How this tool works
 
 *stopAsSuccessProgressBar* is a function that ends the progressbar successfully
 
-*stopAsFailProgressBar* is a function that ends the progressbar with a failure message
+*stopProgressBarAsFail* is a function that ends the progressbar with a failure message
 
+*stopProgressAsCanceled* is a function (optional) that ends the progressbar with a canceled status
 
 When startProgressBar is called, the bash-progress-bar.sh script is initialized in the background.
 Next instruction is executed while the animation is running
 
-The user must use the function *stopAsSuccessProgressBar* (for success) or *stopAsFailProgressBar* (failure)
+The user must use the function *stopAsSuccessProgressBar* (for success) or stopProgressBarAsFail* (failure)
 
+Note
+---
+
+1. It is important to redirect the output of your task to */dev/null* to only see the progressbar animation
 
 Important Note
 ---
