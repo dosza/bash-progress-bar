@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-PROGRESS_BAR_PATH="$(dirname $0)/bash-progress-bar.sh)"
 
 if [ ! -e  "$PROGRESS_BAR_PATH" ]; then
 	if [ -e "$PWD/bash-progress-bar.sh" ]; then 
@@ -21,6 +20,6 @@ stopProgressBarAsFail(){
 }
 
 startProgressBar(){
-	$PROGRESS_BAR_PATH 0.2 "$sucess_filler" 1 $$ &
+	$PROGRESS_BAR_PATH 0.2 "$1" 1 $$ &
 	bg_pid=$!
 }
