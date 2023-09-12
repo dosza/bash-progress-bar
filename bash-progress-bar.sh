@@ -110,8 +110,8 @@ checkIfProcessParentIsALive(){
 
 
 runProgressBar(){
-	newPtr ref_spiner=$1
-	newPtr ref_progress_bar=$2
+	declare -n ref_spiner=$1
+	declare -n ref_progress_bar=$2
 
 	local -i i=0
 	local progress_bar_size=${#ref_progress_bar[@]}
