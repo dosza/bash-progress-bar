@@ -16,6 +16,10 @@ stopAsSuccessProgressBar(){
 }
 
 stopProgressBarAsFail(){
+	stopProgressBar 'SIGHUP'
+}
+
+stopProgressAsCanceled(){
 	stopProgressBar 'SIGUSR1'
 }
 
